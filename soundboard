@@ -1,0 +1,23 @@
+let button;
+
+let sound1;
+
+
+function setup() {
+  sound1 = loadSound('assets/note60.ogg')
+  createCanvas(100, 100);
+  background(0);
+  button = createButton('click me');
+  button.position(0, 0);
+  button.mousePressed(playSound);
+}
+
+function playSound() {
+  sound1.play();
+}
+
+
+function changeBG() {
+  let val = random(255);
+  background(val);
+}
